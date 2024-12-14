@@ -5,6 +5,7 @@ import List "mo:base/List";
 import Text "mo:base/Text";
 import Result "mo:base/Result";
 import Nat "mo:base/Nat";
+import Float "mo:base/Float";
 
 actor {
   public type Lesson = {
@@ -106,40 +107,41 @@ public func calculateTotal() : async Text {
     i += 1;
   };
 
-  var lastNote : Nat = toplaNotes / toplaCredit / 25;
+  var lastNote : Float = Float.fromInt(toplaNotes) / Float.fromInt(toplaCredit) / 25;
 
-    var harfNotu : Text = "";
+  var harfNotu : Text = "";
 
+  var lastNoteUnder100 : Float = lastNote * 25;
 
-  if(lastNote >= 90){
+  if(lastNoteUnder100 >= 90){
     harfNotu := "AA";
   };
-  if(lastNote >= 85 and lastNote < 90){
+  if(lastNoteUnder100 >= 85 and lastNoteUnder100 < 90){
     harfNotu := "BA";
   };
-  if(lastNote >= 80 and lastNote < 85){
+  if(lastNoteUnder100 >= 80 and lastNoteUnder100 < 85){
     harfNotu := "BB";
   };
-  if(lastNote >= 75 and lastNote < 80){
+  if(lastNoteUnder100 >= 75 and lastNoteUnder100 < 80){
     harfNotu := "BC";
   };
-  if(lastNote >= 65 and lastNote < 75){
+  if(lastNoteUnder100 >= 65 and lastNoteUnder100 < 75){
     harfNotu := "CC";
   };
-    if(lastNote >= 60 and lastNote < 65){
+    if(lastNoteUnder100 >= 60 and lastNoteUnder100 < 65){
     harfNotu := "DC";
   };
-    if(lastNote >= 55 and lastNote < 60){
+    if(lastNoteUnder100 >= 55 and lastNoteUnder100 < 60){
     harfNotu := "DD";
   };
-    if(lastNote >= 50 and lastNote < 55){
+    if(lastNoteUnder100 >= 50 and lastNoteUnder100 < 55){
     harfNotu := "FD";
   };
-    if(lastNote >= 0 and lastNote < 50){
+    if(lastNoteUnder100 >= 0 and lastNoteUnder100 < 50){
     harfNotu := "FF";
   };
 
-  let lastNoteString = Nat.toText(lastNote);
+  let lastNoteString = Float.toText(lastNote);
 
   //harfSistemi(lastNote);
     
