@@ -23,7 +23,7 @@ actor {
 
   private stable var lessons : Trie.Trie<LessonId, Lesson> = Trie.empty();
   
-  public func createBook (newLesson: Lesson) : async Nat32{
+  public func createLesson (newLesson: Lesson) : async Nat32{
     let id = next;
     next += 1;
 
