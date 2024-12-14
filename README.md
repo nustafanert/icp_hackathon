@@ -8,7 +8,7 @@ This project helps students calculate and manage their GPA based on their grades
 - **Motoko**: This project uses Motoko for smart contract development. Make sure you have it installed.
 - **Backend Development Tools**: You will need a backend service to interact with the ICP canister and expose APIs.
 
-## Individual
+## About Me
 
 Mustafa Mert Altınsoy is a student at Ege University who began exploring coding languages in 2019. His interest grew toward game and Android app development, and he participated in various YouTube software courses. Just a day ago, he developed his first code in ICP. Mustafa has a passion for robots, machines, and animes, combining his love for technology and creativity in his projects.
 
