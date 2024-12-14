@@ -35,7 +35,9 @@ ICP(ic.sdk) and .dfx
 ## Programming Language
 Motoko & Web3
 
-## Software Development Plan
+## Project Roadmap
+
+**Software Development Plan for Calculate GPA**
 
 1. **Define Smart Contract Structure**  
    - **Variables**:  
@@ -72,3 +74,94 @@ Motoko & Web3
    - Host the backend service and expose it via secure endpoints for public use.  
    - Monitor system performance and user activity, addressing any issues and ensuring smooth operation.
 
+## Smart Conctract We Use
+
+## Setup Environment
+Calculate GPA - Project Installation Guide
+
+This project allows students to calculate their GPA based on their grades and lesson credits using the Internet Computer Protocol (ICP) blockchain. The GPA is computed through a smart contract written in Motoko.
+Prerequisites
+
+Before you start, make sure you have the following installed:
+
+    ICP (Internet Computer Protocol): Set up access to ICP and deploy a smart contract on the network.
+    Motoko: The smart contract is written in Motoko. You can install Motoko via the ICP SDK.
+    Backend Development Tools: A backend service (Node.js, Python, etc.) to interact with the ICP canister and expose APIs.
+
+Installation Steps
+
+Follow these instructions to get the project running locally.
+1. Clone the Repository
+
+Clone the repository to your local machine:
+
+git clone https://github.com/yourusername/calculate-gpa.git
+cd calculate-gpa
+
+2. Set Up the Smart Contract
+Define Smart Contract Structure
+
+The smart contract will store lesson data using the following structure:
+
+    Variables:
+        lessonId: Unique identifier for each lesson.
+        grades: A record to store grades (e.g., {visa: Nat, final: Nat}).
+        credits: A record mapping lessonId to the respective credit value.
+
+Smart Contract Functions:
+
+    addLesson(lessonId: Text, grades: {visa: Nat, final: Nat}, credits: Nat): Adds a new lesson with grades and credits.
+    updateGrades(lessonId: Text, grades: {visa: Nat, final: Nat}): Updates grades for a lesson.
+    getLesson(lessonId: Text): Retrieves the details of a lesson.
+    deleteLesson(lessonId: Text): Deletes a lesson.
+    calculateGPA(): Computes the GPA based on all lessons and their respective credits.
+
+3. Develop and Deploy the Smart Contract
+
+    Implement the smart contract functions in Motoko.
+    Deploy the contract to the ICP network using the tools provided in the ICP SDK.
+    Test each contract function for accuracy and ensure that all functions perform as expected.
+
+4. Backend Development
+Set Up the Backend Service
+
+Develop a backend service (e.g., using Node.js, Python, etc.) that interacts with the ICP canister via API calls.
+
+    Endpoints:
+        POST /addLesson: Add a new lesson with grades and credits.
+        PUT /updateGrades: Update grades for an existing lesson.
+        GET /getLesson: Retrieve the details of a lesson.
+        DELETE /deleteLesson: Delete a lesson.
+        GET /calculateGPA: Retrieve the GPA calculated from all lessons.
+
+5. API Integration with Smart Contract
+
+    Connect the backend service to the Motoko smart contract using ICP’s canister API.
+    Ensure the backend APIs call the smart contract functions for adding, updating, deleting lessons, and calculating the GPA.
+
+6. Testing and Quality Assurance
+Testing:
+
+    Unit Testing: Test individual smart contract functions for correctness.
+    Backend Testing: Test API endpoints to ensure they function correctly, are secure, and are optimized for performance.
+    End-to-End Testing: Perform tests to validate interaction between the backend and smart contract.
+
+7. Deployment
+Deploy the Smart Contract:
+
+    Deploy the smart contract on ICP, ensuring it’s configured and optimized.
+
+Host the Backend:
+
+    Deploy the backend service and expose the APIs securely.
+
+Monitor:
+
+    Continuously monitor system performance and fix issues as needed to ensure a smooth operation.
+
+Contributing
+
+If you’d like to contribute to this project, feel free to fork the repository, create a new branch, and submit a pull request with your changes.
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
