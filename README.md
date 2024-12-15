@@ -1,6 +1,6 @@
 # Calculate GPA 
 
-![Team Logo](https://github.com/nustafanert/icp_hackathon/blob/a1d35bf253ad3b5da3fb66babb470640293cb460/maskot.webp)
+![Team Logo]([https://github.com/nustafanert/icp_hackathon/blob/a1d35bf253ad3b5da3fb66babb470640293cb460/maskot.webp](https://github.com/nustafanert/icp_hackathon/blob/9642fd9f23da200f771de839d6254efbb9ef1320/maskotsquare.jpg))
 
 This project helps students calculate and manage their GPA based on their grades and lesson credits. It uses the Internet Computer Protocol (ICP) blockchain to store and calculate the GPA through smart contracts written in Motoko.
 
